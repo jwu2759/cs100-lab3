@@ -12,6 +12,7 @@ ADD_EXECUTABLE(test
     pow_test.hpp
     div_test.hpp
     rand_test.hpp
+    mult_test.hpp
 )
 
 TARGET_LINK_LIBRARIES(test gtest)
