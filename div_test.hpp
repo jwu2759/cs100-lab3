@@ -13,11 +13,11 @@ TEST(DivTest, DivEvaluateTwo){
 }
 
 TEST(DivTest, DivEvaluateZero){
-        Op* x1 = new Op(3);
-        Op* x2 = new Op(0);
+        Op* x1 = new Op(0);
+        Op* x2 = new Op(3);
         Div* div = new Div(x1, x2);
         EXPECT_DOUBLE_EQ(div->evaluate(), 0);
-        EXPECT_EQ(div->stringify(), "(3/0)");
+        EXPECT_EQ(div->stringify(), "(0/3)");
 }
 
 TEST(DivTest, DivEvaluateRecursive){
@@ -25,9 +25,9 @@ TEST(DivTest, DivEvaluateRecursive){
         Op* x2 = new Op(5);
 	Op* x3 = new Op(2);
         Div* div = new Div(x1, x2);
-	Div* div = new Div(div, x3);
-        EXPECT_DOUBLE_EQ(div->evaluate(), 1);
-        EXPECT_EQ(div->stringify(), "((10/5)/2)");
+	Div* div1 = new Div(div, x3);
+        EXPECT_DOUBLE_EQ(div1->evaluate(), 1);
+        EXPECT_EQ(div1->stringify(), "((10/5)/2)");
 }
 
 
