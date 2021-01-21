@@ -11,6 +11,21 @@ TEST(OpTest, OpEvaluateNonZero) {
 }
 
 //new tests start here
+TEST(OpTest, StringifyDouble) {
+    Op* test = new Op(8.5);
+    EXPECT_EQ(test->stringify(), "8.5");
+}
+
+TEST(OpTest, StringifyNegDouble){
+    Op* test = new Op(-8.5);
+    EXPECT_EQ(test->stringify(), "-8.5");
+}
+
+TEST(OpTest, StringifyInt){
+    Op* test = new Op(4);
+    EXPECT_EQ(test->stringify(), "4");
+}
+
 TEST(OpTest, OpEvaluateDouble) {
 	SevenFiveOpMock* test = new SevenFiveOpMock();
 	EXPECT_EQ(test->evaluate(), 7.5);

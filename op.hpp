@@ -7,10 +7,14 @@ class Op : public Base {
     //private variable for value
     private: 
 	double val;
+	std::ostringstream strs;
     public:
-        Op(double value) : Base() {val = value;}
+        Op(double value) : Base() {
+		val = value;
+		strs << val;	
+	}
         virtual double evaluate() { return val; }
-	virtual std::string stringify() { return std::to_string(val); }
+	virtual std::string stringify() { return strs.str(); }
 };
 
 class SevenFiveOpMock : public Base{
