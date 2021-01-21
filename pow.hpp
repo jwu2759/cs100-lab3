@@ -6,6 +6,7 @@
 
 class Pow : public Base {
 	private:
+		//use pointers to navigate tree
 		Base* left = 0;
 		Base* right = 0;
 	public:

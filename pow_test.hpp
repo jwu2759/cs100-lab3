@@ -69,6 +69,7 @@ TEST(PowTest, Recursive){
 	EXPECT_NEAR(powTest2->evaluate(), 306.991, 0.001);
 }
 
+//evaluate first two, then next two. 
 TEST(PowTest, RecursiveStringify){
 	Op* test1 = new Op(2.5);
 	Pow* powTest = new Pow(test1,test1);
