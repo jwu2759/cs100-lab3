@@ -9,6 +9,7 @@ ADD_EXECUTABLE(test
     op_test.hpp
     add_test.hpp
     sub_test.hpp
+    div_test.hpp
 )
 
 TARGET_LINK_LIBRARIES(test gtest)
