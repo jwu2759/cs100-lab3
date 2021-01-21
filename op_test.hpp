@@ -10,6 +10,7 @@ TEST(OpTest, OpEvaluateNonZero) {
     EXPECT_EQ(test->evaluate(), 8);
 }
 
+//new tests start here
 TEST(OpTest, OpEvaluateDouble) {
 	SevenFiveOpMock* test = new SevenFiveOpMock();
 	EXPECT_EQ(test->evaluate(), 7.5);
