@@ -9,6 +9,7 @@ class Pow : public Base {
 		Base* left = 0;
 		Base* right = 0;
 	public:
+		//constructor
 		Pow(Base* l, Base* r){
 			left = l;
 			right = r;

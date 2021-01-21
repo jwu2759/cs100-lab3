@@ -61,7 +61,7 @@ TEST(PowTest, PowZeroToDoubleStringify){
 	Pow* powTest = new Pow(test1,test2);
 	EXPECT_EQ(powTest->stringify(), "(0**1.5)");
 }
-
+//evaluate first and then second
 TEST(PowTest, Recursive){
 	Op* test1 = new Op(2.5);
 	Pow* powTest = new Pow(test1,test1);
